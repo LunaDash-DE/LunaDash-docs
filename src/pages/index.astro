@@ -14,7 +14,7 @@ const repository = "https://github.com/LuYishan-4/LunaDash";
 const profile = "https://github.com/LuYishan-4";
 const avatar = "https://luyishan-4-blog.wuming381906.workers.dev/assets/images/avatar.webp";
 
-const build = `git clone --branch dev ${repository}.git
+const build = `git clone --recurse-submodules --branch dev ${repository}.git
 cd LunaDash
 ./scripts/install-session.sh`;
 const shortcuts: Array<[string, string]> = [
