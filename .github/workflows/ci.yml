@@ -18,6 +18,8 @@ jobs:
           node-version: "22"
           cache: npm
           cache-dependency-path: package-lock.json
+      - name: Keep generated release pages out of the source repository
+        run: python3 scripts/test-release-source.py
       - name: Install dependencies
         run: npm ci --include=dev --ignore-scripts
       - name: Check website sources
