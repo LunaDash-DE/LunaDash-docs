@@ -1,6 +1,6 @@
 # LunaDash documentation site
 
-This repository contains the Astro site used by LunaDash. The integration repository pins this project as the `site/` submodule.
+This repository contains the independent Astro website for LunaDash. Its source stays here and is cloned separately by the integration repository's validation and Pages workflows.
 
 ## Local development
 
@@ -10,4 +10,4 @@ npm run check
 npm run build
 ```
 
-The site is deployed from the integration repository's selected commit. Update its pinned submodule revision there after reviewing a site change.
+Website CI validates each change in this repository. The integration repository's Pages workflow fetches the current `main` revision when it runs; it does not include this source in its checkout.

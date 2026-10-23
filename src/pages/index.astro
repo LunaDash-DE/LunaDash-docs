@@ -3,10 +3,10 @@ import "../styles.css";
 import "../docs.css";
 import CodeBlock from "../components/CodeBlock.astro";
 import ScreenshotCard from "../components/ScreenshotCard.astro";
-import dashboard from "../../../docs/image/LunaDash-20260920-024312-792.png";
-import appearance from "../../../docs/image/LunaDash-20260920-024259-008.png";
-import workspace from "../../../docs/image/LunaDash-20260920-024708-948.png";
-import calendar from "../../../docs/image/LunaDash-20260920-024455-959.png";
+import dashboard from "../../docs/image/LunaDash-20260920-024312-792.png";
+import appearance from "../../docs/image/LunaDash-20260920-024259-008.png";
+import workspace from "../../docs/image/LunaDash-20260920-024708-948.png";
+import calendar from "../../docs/image/LunaDash-20260920-024455-959.png";
 
 const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const asset = (name: string): string => `${base}assets/${name}`;
@@ -14,7 +14,7 @@ const repository = "https://github.com/LuYishan-4/LunaDash";
 const profile = "https://github.com/LuYishan-4";
 const avatar = "https://luyishan-4-blog.wuming381906.workers.dev/assets/images/avatar.webp";
 
-const build = `git clone --recurse-submodules --branch dev ${repository}.git
+const build = `git clone --branch dev ${repository}.git
 cd LunaDash
 ./scripts/install-session.sh`;
 const shortcuts: Array<[string, string]> = [
